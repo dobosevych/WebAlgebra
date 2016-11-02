@@ -29,6 +29,11 @@ def tranpose(s):
     return new_matrix
 
 
+@app.route('/template')
+def new_template():
+    import random
+    title = random.choice(['Hello', 'Hello, World', 'Bla-bla', 'You are lucky!'])
+    return render_template('template.html', title=title)
 
 @app.route('/', methods=["GET", "POST"])
 def get_index():
