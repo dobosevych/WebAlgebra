@@ -2,6 +2,15 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
+def is_answer(n):
+    """
+    >>> is_answer(42)
+    True
+    >>> is_answer(35)
+    False
+    """
+    return n == 42
+
 def tranpose(s):
     matrix = []
     lines = s.split('\n')
